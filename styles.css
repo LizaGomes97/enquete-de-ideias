@@ -1,0 +1,88 @@
+/* CSS básico para estilo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 800px; /* Limita a largura da página */
+    margin: 20px auto; /* Centraliza o container */
+    padding: 20px; /* Adiciona espaço interno */
+    background-color: white; /* Cor de fundo do container */
+    border-radius: 8px; /* Arredonda os cantos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.suggestion-form {
+    margin-bottom: 20px; /* Espaço entre o formulário e as sugestões */
+}
+
+label {
+    display: block; /* Faz o label ocupar toda a largura */
+    margin: 10px 0 5px; /* Margens para espaçamento */
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Faz os campos ocuparem 100% da largura do container */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 5px; /* Arredondar bordas */
+    box-sizing: border-box; /* Inclui padding e border no total da largura */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente apenas */
+}
+
+button {
+    background-color: #35424a; /* Cor do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Arredondar bordas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Animação suave na mudança de cor */
+}
+
+button:hover {
+    background-color: #2a3e48; /* Cor do botão ao passar o mouse */
+}
+
+.suggestion-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+}
+
+.suggestion-list li {
+    background: #f9f9f9; /* Cor de fundo das sugestões */
+    margin: 10px 0; /* Margem entre os itens da lista */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Arredondar bordas */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    position: relative; /* Para permitir posicionamento de elementos filhos */
+}
+
+footer {
+    background: #35424a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

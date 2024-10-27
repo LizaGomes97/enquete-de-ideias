@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Sugestões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS externo -->
+</head>
+<body>
+
+<header>
+    <h1>Site de Sugestões de Melhoria</h1>
+</header>
+
+<div class="container">
+    <div class="suggestion-form">
+        <h2>Cadastro de Sugestões</h2>
+        <form id="suggestionForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required><br><br>
+            
+            <label for="description">Descrição:</label><br>
+            <textarea id="description" rows="4" required></textarea><br><br>
+            
+            <label for="language">Linguagem Sugerida:</label>
+            <input type="text" id="language"><br><br>
+
+            <label for="complexity">Nível de Complexidade:</label>
+            <select id="complexity" required>
+                <option value="" disabled selected>Selecione um nível</option>
+                <option value="Iniciante">Iniciante</option>
+                <option value="Médio">Médio</option>
+                <option value="Difícil">Difícil</option>
+                <option value="Indefinido">Indefinido</option>
+            </select><br><br>
+
+            <button type="submit">Enviar Sugestão</button>
+        </form>
+    </div>
+
+    <h2>Sugestões Recentes</h2>
+    <ul class="suggestion-list" id="suggestionList">
+        <!-- Sugestões serão inseridas aqui -->
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 Site de Sugestões</p>
+</footer>
+
+<script src="script.js"></script> <!-- Link para o arquivo JavaScript externo -->
+
+</body>
+</html>
