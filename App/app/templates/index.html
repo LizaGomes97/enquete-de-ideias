@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mx-auto px-4 py-8">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Cadastro de Sugestões</h2>
+        
+        <form id="suggestionForm" class="space-y-6">
+            
+            <div class="space-y-2">
+                <label for="title" class="block text-gray-700 font-medium">Título:</label>
+                <input type="text" id="title" required class="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500">
+            </div>
+
+            <div class="space-y-2">
+                <label for="description" class="block text-gray-700 font-medium">Descrição:</label>
+                <textarea id="description" rows="4" required class="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"></textarea>
+            </div>
+
+            <div class="space-y-2">
+                <label for="language" class="block text-gray-700 font-medium">Linguagem Sugerida:</label>
+                <input type="text" id="language" class="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500">
+            </div>
+
+          
+            <div class="space-y-2">
+                <label for="complexity" class="block text-gray-700 font-medium">Nível de Complexidade:</label>
+                <select id="complexity" required class="w-full p-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="" disabled selected>Selecione um nível</option>
+                    <option value="Iniciante">Iniciante</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Difícil">Difícil</option>
+                    <option value="Indefinido">Indefinido</option>
+                </select>
+            </div>
+
+         
+            <div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-200">
+                    Enviar Sugestão
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="mt-12 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Sugestões Recentes</h2>
+        <ul class="space-y-6" id="suggestionList">
+     
+        </ul>
+    </div>
+</div>
+
+ <!-- Criar componente -->
+<footer class="bg-gray-800 text-white text-center py-4 mt-12">
+    <p>&copy; 2024 Site de Sugestões</p>
+</footer>
+
+<script src="script.js"></script> 
+{% endblock %}
