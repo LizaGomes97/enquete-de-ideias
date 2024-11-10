@@ -1,3 +1,7 @@
+
+// O formulario deve enviar para o banco .. Obs: banco temporario em memoria ... 
+// Usar Ajax na busca ? Axios ? 
+
 // JavaScript para adicionar sugestões à lista
 const suggestionForm = document.getElementById('suggestionForm');
 const suggestionList = document.getElementById('suggestionList');
