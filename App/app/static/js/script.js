@@ -1,3 +1,39 @@
+//ENVIA SUGESTÃO AO BANCO DE DADOS
+async function submitSuggestion(newSuggestion) {
+    try{
+        const response = await fetch('/sugestoes',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newSuggestion),
+        });
+
+        if (response.ok){
+            console.log("Sugestão enviada ao servidor com sucesso.");
+        } else{
+            console.error("Erro ao enviar sugestão ao servidor.")
+        }
+    } catch (erro) {
+        console.error("Erro na comunicação com o servidor:",error)
+    }
+}
+
+//BUSCA SUGESTOES NO BANCO DE DADOS
+async function fetchSuggestionsFromServer() {
+    try{
+        const response = await fetch('/sugestoes');
+        if (response.ok) {
+            const serverSuggestions = await response.json();
+            suggestions = serverSuggestions;
+            renderSuggestions();
+        } else{
+            console.error("Erro ao carregar sugestões do servidor.");
+        }
+    } catch (error) {
+        console.error("Erro na comunicação com o servidor")
+    }
+}
+
+fetchSuggestionsFromServer();
 
 // O formulario deve enviar para o banco .. Obs: banco temporario em memoria ... 
 // Usar Ajax na busca ? Axios ? 
@@ -37,6 +73,8 @@ suggestionForm.addEventListener('submit', function(event) {
         complexity,
         likes: 0 // Inicializa os likes como 0
     };
+
+    submitSuggestion(newSuggestion);
 
     suggestions.push(newSuggestion); // Adiciona a nova sugestão ao array
     saveSuggestions(suggestions); // Salva as sugestões atualizadas no Local Storage
